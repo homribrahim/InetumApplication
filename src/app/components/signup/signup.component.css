@@ -1,0 +1,20 @@
+.panel {
+  width: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 650px;
+}
+.panel-body {
+  padding-top: 100px !important;
+}
+.text-center {
+  margin-top: 10px;
+  margin-left: 25px;
+}
+hr {
+  border: none;
+  border-left: 3px solid hsla(200, 10%, 50%, 100);
+  height: 550px;
+  width: 1px;
+}

@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #0b001a;
+  height: 100vh;
+}
+svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

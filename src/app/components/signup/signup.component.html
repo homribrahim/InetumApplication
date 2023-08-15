@@ -1,0 +1,95 @@
+<div class="outer">
+  <div class="container">
+    <div class="row">
+      <div class="offset-md-2 col-lg-7 col-md-7 offset-lg-4 offset-md-3">
+        <div class="panel border bg-white">
+          <div class="panel-heading">
+            <img
+              class="img-fluid"
+              src="/assets/images/logo_bleu.png"
+              alt="logoInetum"
+              style="width: 250px"
+            />
+          </div>
+          <hr />
+          <div class="panel-body p-3">
+            <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+              <div class="form-group pt-3">
+                <div
+                  class="input-field"
+                  [class.error]="
+                    signUpForm.controls['firstName'].dirty &&
+                    signUpForm.hasError('required', 'firstName')
+                  "
+                >
+                  <input
+                    formControlName="firstName"
+                    type="text"
+                    placeholder="First Name"
+                  />
+                </div>
+              </div>
+              <div class="form-group pt-3">
+                <div
+                  class="input-field"
+                  [class.error]="
+                    signUpForm.controls['lastName'].dirty &&
+                    signUpForm.hasError('required', 'lastName')
+                  "
+                >
+                  <input
+                    formControlName="lastName"
+                    type="text"
+                    placeholder="Last Name"
+                  />
+                </div>
+              </div>
+              <div class="form-group pt-3">
+                <div
+                  class="input-field"
+                  [class.error]="
+                    signUpForm.controls['email'].dirty &&
+                    signUpForm.hasError('required', 'email')
+                  "
+                >
+                  <input
+                    formControlName="email"
+                    type="text"
+                    placeholder="Email"
+                  />
+                </div>
+              </div>
+              <div class="form-group pt-3">
+                <div
+                  class="input-field"
+                  [class.error]="
+                    signUpForm.controls['password'].dirty &&
+                    signUpForm.hasError('required', 'password')
+                  "
+                >
+                  <input
+                    formControlName="password"
+                    [type]="type"
+                    placeholder="Password"
+                  />
+                  <button
+                    (click)="hideShowPass()"
+                    type="button"
+                    class="bg-white text-muted"
+                  >
+                    <span class="fa {{ eyeIcon }}"></span>
+                  </button>
+                </div>
+              </div>
+              <button type="submit" class="button">Sign up</button>
+              <div class="text-center pt-4 text-muted">
+                Already have an account?
+                <a id="forgot" routerLink="/login" href="#">Login</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
