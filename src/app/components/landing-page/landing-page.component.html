@@ -1,5 +1,10 @@
+<style>
+  audio::-webkit-media-controls-panel {
+    background-color: #0b001a;
+  }
+</style>
 <body>
-  <audio src="/assets/music/song.mp3" controls autoplay></audio>
+  <audio src="/assets/music/song.mp3" autoplay controls></audio>
   <div class="content">
     <div *ngIf="showDiv" class="first">Inetum ,</div>
     <div *ngIf="showDiv" class="last">

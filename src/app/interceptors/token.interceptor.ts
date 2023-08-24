@@ -1,4 +1,4 @@
-import { TokenApiModel } from './../models/token-api.model';
+/* import { TokenApiModel } from './../models/token-api.model';
 import { Router } from '@angular/router';
 import { NgToastService } from 'ng-angular-popup';
 import { AuthService } from './../services/auth.service';
@@ -64,3 +64,5 @@ export class TokenInterceptor implements HttpInterceptor {
     )
   }
 }
+ 
+ */

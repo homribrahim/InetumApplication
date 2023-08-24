@@ -12,30 +12,30 @@
             />
           </div>
           <div class="panel-body p-3">
-            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
               <div class="form-group pt-3">
                 <div
                   class="input-field"
                   [class.error]="
-                    loginForm.controls['username'].dirty &&
-                    loginForm.hasError('required', 'username')
+                    loginForm.controls['email'].dirty &&
+                    loginForm.hasError('required', 'email')
                   "
                 >
                   <input
-                    formControlName="username"
+                    formControlName="email"
                     type="text"
-                    placeholder="Username"
+                    placeholder="Email"
                     required
                   />
                 </div>
               </div>
               <small
                 *ngIf="
-                  loginForm.controls['username'].dirty &&
-                  loginForm.hasError('required', 'username')
+                  loginForm.controls['email'].dirty &&
+                  loginForm.hasError('required', 'email')
                 "
                 class="text-danger"
-                >*Username is required*</small
+                >*Email is required*</small
               >
               <div class="form-group pt-3">
                 <div
