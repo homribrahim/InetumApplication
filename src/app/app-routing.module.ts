@@ -5,7 +5,8 @@ import { LandingPageComponent } from './components/landing-page/landing-page.com
 import { SpinnerComponent } from './components/spinner/spinner.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-/* import { AuthGuard } from './guards/auth.guard'; */
+import { AuthGuard } from './guards/auth.guard';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 const routes: Routes = [
   /* {path:'', redirectTo:'login', pathMatch:'full'}, */
@@ -16,8 +17,9 @@ const routes: Routes = [
   {
     path: 'dashboard',
     component: DashboardComponent,
-    /* canActivate: [AuthGuard], */
+    canActivate: [AuthGuard],
   },
+  { path: '**', component: NotFoundComponent },
 ];
 
 @NgModule({

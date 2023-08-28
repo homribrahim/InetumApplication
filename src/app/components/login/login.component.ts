@@ -5,6 +5,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import ValidateForm from '../../helpers/validationform';
 import { UserStoreService } from 'src/app/services/user-store.service';
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -19,7 +20,8 @@ export class LoginComponent implements OnInit {
     private fb: FormBuilder,
     private auth: AuthService,
     private router: Router,
-    private userStore: UserStoreService
+    private userStore: UserStoreService,
+    
   ) {}
 
   ngOnInit() {
@@ -39,8 +41,9 @@ export class LoginComponent implements OnInit {
       console.log(this.loginForm.value);
       this.auth.signIn(this.loginForm.value).subscribe({
         next: (res) => {
-          console.log(res.message);
+          console.log(res.message); //the res is the response from the server
           this.loginForm.reset();
+          this.auth.storeToken(res.token); 
           this.router.navigate(['dashboard']);
         },
         error: (err) => {

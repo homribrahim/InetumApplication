@@ -12,7 +12,8 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { SpinnerComponent } from './components/spinner/spinner.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-/* import { NgToastModule } from 'ng-angular-popup'; */
+import { NotFoundComponent } from './components/not-found/not-found.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +23,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     LandingPageComponent,
     SpinnerComponent,
     DashboardComponent,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,6 +31,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
+ 
   ],
   providers: [
     /* {
